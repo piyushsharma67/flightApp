@@ -11,6 +11,7 @@ interface ILoginScreentIndexProps {
     onPressSubmitOtp: () => void
     onPressValidateOtp: () => void
     onGoBack: () => void
+    onPressMobile: (value: string) => void
 }
 
 function LoginScreentIndex(props: ILoginScreentIndexProps) {
@@ -21,6 +22,7 @@ function LoginScreentIndex(props: ILoginScreentIndexProps) {
             <AppImage />
             {props.currentScreen == 1 && <RequestOtp
                 onPressSubmitOtp={props.onPressSubmitOtp}
+                onPressMobile={props.onPressMobile}
             />}
             {props.currentScreen == 2 && <ValidateOtp
                 onGoBack={props.onGoBack}

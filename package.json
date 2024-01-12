@@ -8,13 +8,14 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "android:apk":"cd android && ./gradlew assembleRelease"
+    "android:apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
     "@reduxjs/toolkit": "^2.0.1",
+    "@testing-library/react-native": "^12.4.3",
     "@types/react-native-vector-icons": "^6.4.18",
     "react": "18.2.0",
     "react-native": "0.73.2",

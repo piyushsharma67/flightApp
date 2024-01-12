@@ -59,5 +59,5 @@ const LoginSlice = createSlice({
     },
 
 })
-
+export const loginSliceActions = { ...LoginSlice.actions }
 export default LoginSlice.reducer

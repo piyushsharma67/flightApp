@@ -8,7 +8,8 @@ function LoginScreen() {
         currentScreen,
         onPressSubmitOtp,
         onPressValidateOtp,
-        onGoBack
+        onGoBack,
+        onPressMobile
     } = useLoginHook()
     return (
         <LoginScreentIndex
@@ -17,6 +18,7 @@ function LoginScreen() {
             onPressSubmitOtp={onPressSubmitOtp}
             onPressValidateOtp={onPressValidateOtp}
             onGoBack={onGoBack}
+            onPressMobile={onPressMobile}
         />
     )
 }

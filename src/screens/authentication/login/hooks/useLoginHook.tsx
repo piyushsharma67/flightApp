@@ -3,6 +3,8 @@ import { useSelector } from "react-redux"
 import { RootState, useAppDispatch } from "../../../../redux/store"
 import { requestOtpThunk, validateOtpThunk } from "../redux/thunk/login.thunk"
 
+import { loginSliceActions } from "../redux/slice/login.slice"
+
 const loginFragments = {
     requestOtp: 1,
     validateOtp: 2
@@ -26,6 +28,10 @@ function useLoginHook() {
         dispatch(validateOtpThunk({ mobile: screenState.mobile, otp: screenState.otp }))
     }, [])
 
+    const onPressMobile = useCallback(async (value: string) => {
+        dispatch(loginSliceActions.setMobile(value))
+    }, [])
+
     const onGoBack = useCallback(() => {
         setScreen(loginFragments.requestOtp)
     }, [currentScreen])
@@ -35,7 +41,8 @@ function useLoginHook() {
         loading,
         onPressSubmitOtp,
         onPressValidateOtp,
-        onGoBack
+        onGoBack,
+        onPressMobile
     }
 }
 

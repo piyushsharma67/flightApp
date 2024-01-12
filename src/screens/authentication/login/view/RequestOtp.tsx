@@ -4,6 +4,7 @@ import { Button, Text, TextInput } from 'react-native-paper'
 
 interface IRequestOtpProps {
     onPressSubmitOtp: () => void
+    onPressMobile: (val: string) => void
 }
 
 function RequestOtp(props: IRequestOtpProps) {
@@ -16,6 +17,7 @@ function RequestOtp(props: IRequestOtpProps) {
                 style={style.input}
                 keyboardType='numeric'
                 maxLength={10}
+                onChangeText={props.onPressMobile}
             />
             <Button
                 mode='contained'
